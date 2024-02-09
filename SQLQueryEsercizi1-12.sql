@@ -13,7 +13,7 @@ WHERE Città = 'Palermo'
 --------- Esercizio 6
 SELECT Cognome, Nome, Indirizzo, DataViolazione, Importo, DecurtamentoPunti FROM Verbale INNER JOIN Anagrafica 
 ON Verbale.IdAnagrafica = Anagrafica.IdAnagrafica
-WHERE DataViolazione BETWEEN '31/01/2009' AND '01/08/2009'
+WHERE DataViolazione BETWEEN '01/02/2009' AND '31/07/2009'
 --------- Esercizio 7
 SELECT IdAnagrafica, SUM(Importo) AS TotaleImporto FROM Verbale GROUP BY IdAnagrafica ORDER BY TotaleImporto DESC
 --------- Esercizio 8
