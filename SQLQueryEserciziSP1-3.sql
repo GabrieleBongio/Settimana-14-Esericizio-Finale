@@ -5,9 +5,7 @@ CREATE PROCEDURE VerbaliAnno (
 )
 AS
 BEGIN
-	DECLARE @StartDate DATETIME = '01/01/' + @Anno
-	DECLARE @EndDate DATETIME = '31/12/' + @Anno
-	SELECT * FROM Verbale WHERE DataViolazione BETWEEN @StartDate AND @EndDate
+	SELECT * FROM Verbale WHERE YEAR(DataViolazione) = @Anno
 END
 GO
 
